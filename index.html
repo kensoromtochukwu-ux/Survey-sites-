@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Survey Site</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      max-width: 480px;
+      width: 100%;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .blue-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 16px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+      transition: all 0.3s;
+      margin: 20px 0;
+    }
+
+    .blue-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #f8fafc;
+      margin: 15px 0;
+      padding: 18px;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #1e3a8a;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .social-link:hover {
+      background: #e0f2fe;
+      transform: scale(1.03);
+    }
+
+    .warning {
+      background: #fef3c7;
+      border: 2px solid #f59e0b;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 25px 0;
+      font-size: 16px;
+      color: #92400e;
+      text-align: left;
+    }
+
+    .goodluck {
+      font-size: 32px;
+      font-weight: 700;
+      color: #16a34a;
+      margin-top: 30px;
+      text-shadow: 0 4px 8px rgba(22, 163, 74, 0.2);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .icon {
+      font-size: 28px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div id="page1" class="container">
+    <h1>Join Our Free Survey Site</h1>
+    <p>Take short surveys and earn rewards instantly. Join thousands of happy members!</p>
+    <button onclick="goToPage2()" class="blue-btn">
+      Continue to Join
+    </button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="container hidden">
+    <h1>Join Our WhatsApp Channel</h1>
+    
+    <a href="https://chat.whatsapp.com/" target="_blank" class="social-link">
+      <i class="fab fa-whatsapp icon" style="color: #25D366;"></i>
+      <span>WhatsApp Channel</span>
+    </a>
+
+    <a href="https://t.me/" target="_blank" class="social-link">
+      <i class="fab fa-telegram-plane icon" style="color: #229ED9;"></i>
+      <span>Telegram Channel</span>
+    </a>
+
+    <p style="margin: 25px 0 15px; font-size: 17px; font-weight: 500;">
+      Our survey sites are waiting for you!
+    </p>
+
+    <div class="warning">
+      <strong>Note:</strong> Make sure you are using a good phone with stable internet access for the best experience.
+    </div>
+
+    <div style="margin: 30px 0; padding: 20px; background: #fee2e2; border-radius: 15px; border: 2px solid #ef4444; color: #b91c1c; font-size: 15px; text-align: left;">
+      <strong>⚠️ Important Security Notice:</strong><br><br>
+      Never reply to any message from anyone outside the channel or groups.<br>
+      Anyone claiming to be an admin is a scammer.<br><br>
+      You will be given the real admin's number only inside the official channel.<br><br>
+      "ANY ISSUES, AM HERE TO HELP Y'ALL" text will always be sent by 10:30 PM.
+    </div>
+
+    <div class="goodluck">GOOD LUCK! 🎉</div>
+  </div>
+
+  <script>
+    function goToPage2() {
+      document.getElementById('page1').classList.add('hidden');
+      document.getElementById('page2').classList.remove('hidden');
+    }
+
+    // Optional: Auto-focus on mobile
+    window.onload = function() {
+      if (window.innerWidth < 600) {
+        document.body.style.padding = "10px";
+      }
+    };
+  </script>
+
+</body>
+</html>
